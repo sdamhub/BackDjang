@@ -13,3 +13,6 @@ This command executes migration process
 
 >python manage.py migrate
 This executes the migration
+
+> python manage.py createsuperuser
+This command creates the username and password

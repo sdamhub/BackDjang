@@ -4,31 +4,7 @@ from .models import Feature
 
 # Create your views here.
 def index(request):
-    feature1 = Feature()
-    feature1.id = 0
-    feature1.name = 'Quick'
-    feature1.is_true = True
-    feature1.details = 'Exceptional delivery done at lightning speed'
-
-    feature2 = Feature()
-    feature2.id = 1
-    feature2.name = 'Trustworthy'
-    feature2.is_true = True
-    feature2.details = 'We value your confidence in our service'
-
-    feature3 = Feature()
-    feature3.id = 2
-    feature3.name = 'Remarkable'
-    feature3.is_true = True
-    feature3.details = 'We strive to ensure delivery of service you cannot forget in a hurry'
-
-    feature4 = Feature()
-    feature4.id = 3
-    feature4.name = 'Prepared'
-    feature4.is_true = False
-    feature4.details = 'Come rain, come sunshine, we are here to serve you'
-
-    features = [feature1, feature2, feature3, feature4]
+    features = Feature.objects.all()
 
     return render(request, 'index.html', {'features' : features})
 
