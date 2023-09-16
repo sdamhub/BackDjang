@@ -24,7 +24,9 @@ def index(request):
     feature4.name = 'Prepared'
     feature4.details = 'Come rain, come sunshine, we are here to serve you'
 
-    return render(request, 'index.html', {'feature1' : feature1, 'feature2': feature2, 'feature3': feature3, 'feature4': feature4})
+    features = [feature1, feature2, feature3, feature4]
+
+    return render(request, 'index.html', {'features' : features})
 
 def counter(request):
     texts = request.POST['texts']
