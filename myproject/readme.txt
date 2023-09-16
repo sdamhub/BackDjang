@@ -7,3 +7,9 @@
     <textarea name="texts" rows="10" cols="50"></textarea><br>
     <input type="submit"/>
 </form>
+
+>python manage.py makemigrations
+This command executes migration process
+
+>python manage.py migrate
+This executes the migration
