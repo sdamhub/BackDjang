@@ -20,7 +20,6 @@ def register(request):
         email = request.POST['email']
         password = request.POST['password']
         password2 = request.POST['password2']
-
         if password == password2:
             if User.objects.filter(email=email).exists():
                 messages.info(request, 'Email Already Used')
@@ -32,10 +31,9 @@ def register(request):
                 user = User.objects.create_user(username=username, email=email, password=password)
                 user.save();
                 return redirect('login')
-
         else:
             messages.info(request, 'password not the same')
-            return  redirect('register')
+            return redirect('register')
     else:
         return render(request, 'register.html')
 
@@ -53,6 +51,11 @@ def login(request):
             return redirect('login')
     else:
         return render(request, 'login.html')
+
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
 
 def counter(request):
     texts = request.POST['texts']
