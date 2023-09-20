@@ -77,7 +77,15 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql', #it was previously sqlite3
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+"""
+#Use this database setting when you want to migrate to postgres 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',   #it was previously sqlite3
         'NAME': 'myproject',   # previously - BASE_DIR / 'db.sqlite3',
         'USER': 'postgres',
         'PASSWORD': '',
@@ -85,6 +93,7 @@ DATABASES = {
 
     }
 }
+"""
 
 
 # Password validation
