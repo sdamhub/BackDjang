@@ -1,12 +1,4 @@
-
-<h1>
-    Input your text in the box below:
-</h1>
-<form method="POST" action="counter">
-    {% csrf_token %}
-    <textarea name="texts" rows="10" cols="50"></textarea><br>
-    <input type="submit"/>
-</form>
+Some notes to self:
 
 >python manage.py makemigrations
 This command executes migration process
