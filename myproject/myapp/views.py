@@ -10,8 +10,8 @@ def index(request):
 
     return render(request, 'index.html', {'features' : features})
 
-
-
+def about(request):
+    return render(request, 'about.html')
 
 
 def register(request):

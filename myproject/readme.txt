@@ -21,3 +21,5 @@ I noticed that once the migration of the database was made to postgres, I could 
 in the default manner from the command prompt using the command
 >python manage.py runserver
 
+
+One thing is certain now, this is no longer a one page template as downloaded.
