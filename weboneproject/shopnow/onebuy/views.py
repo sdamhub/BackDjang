@@ -13,7 +13,7 @@ def register(request):
         last_name = request.POST['last_name']
         birthday = request.POST['birthday']
         gender = request.POST['gender']
-        #username = request.POST['username']
+        username = request.POST['username']
         phone = request.POST['phone']
         email = request.POST['email']
         password = request.POST['password']
