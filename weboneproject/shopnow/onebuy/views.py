@@ -9,11 +9,11 @@ def index(request):
 
 def register(request):
     if request.method == 'POST':
-        first_name = request.POST['first_name']
+        firstname = request.POST['first_name']
         last_name = request.POST['last_name']
         birthday = request.POST['birthday']
         gender = request.POST['gender']
-        username = request.POST['username']
+        #username = request.POST['username']
         phone = request.POST['phone']
         email = request.POST['email']
         password = request.POST['password']
